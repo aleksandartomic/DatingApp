@@ -14,7 +14,6 @@ export class MemberListResolver implements Resolve<User[]> {
                 private alertify: AlertifyService) {}
 
     resolve(route: ActivatedRouteSnapshot): Observable<User[]> {
-        // tslint:disable-next-line: no-string-literal
         return this.userService.getUsers().pipe(
             catchError(error => {
                 this.alertify.error('Problem retrieving data');
