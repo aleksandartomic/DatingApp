@@ -6,6 +6,7 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { MomentModule } from 'ngx-moment';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -63,6 +64,7 @@ export function tokenGetter() {
     RouterModule.forRoot(appRoutes),
     NgxGalleryModule,
     FileUploadModule,
+    MomentModule,
     JwtModule.forRoot({
       config: {
         tokenGetter,
